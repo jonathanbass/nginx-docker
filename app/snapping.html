@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        ::-webkit-scrollbar {
+            width: 20px;
+            background-color: #2a323f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #394a77;
+        }
+
+        .content {
+            overflow-y: scroll;
+            height: 700px;
+            background-color: black;
+            scroll-snap-type: y proximity;
+        }
+
+        .item {
+            scroll-snap-align: start;
+            height: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content" class="content">
+        <div class="item" style="background-color: blue;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: yellowgreen;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: orange;"></div>
+        <div class="item" style="background-color: orangered;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: blue;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: yellowgreen;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: orange;"></div>
+        <div class="item" style="background-color: orangered;"></div>
+        <div class="item" style="background-color: red;"></div>
+        <div class="item" style="background-color: blue;"></div>
+        <div class="item" style="background-color: green;"></div>
+        <div class="item" style="background-color: yellowgreen;"></div>
+        <div class="item" style="background-color: yellow;"></div>
+        <div class="item" style="background-color: orange;"></div>
+        <div class="item" style="background-color: orangered;"></div>
+        <div class="item" style="background-color: red;"></div>
+    </div>
+
+    <script>
+        const content = document.getElementById("content");
+        const scrolledToBottom = () => {
+            if (content.scrollTop + content.offsetHeight < content.scrollHeight) {
+                return;
+            }
+
+            console.log('end reached');
+        }
+
+        content.addEventListener("scroll", scrolledToBottom);
+    </script>
+</body>
+
+</html>

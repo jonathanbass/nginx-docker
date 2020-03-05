@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <style>
+        ::-webkit-scrollbar {
+            width: 20px;
+            background-color: #2a323f;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #394a77;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="output" style="padding: 0 20px; overflow-y: scroll; height: 350px; background-color: black; color: green;"></div>
+    <script>
+        const output = document.getElementById("output");
+        const rows = [
+            {name: "rowh", value: 11},
+            {name: "rowf", value: 101},
+            {name: "row1", value: 23},
+            {name: "row4", value: 45},
+            {name: "rowp", value: 1000},
+            {name: "rowd", value: 987},
+            {name: "rowr", value: 114},
+            {name: "row12", value: 1401},
+            {name: "row15", value: 253},
+            {name: "row44", value: 465},
+            {name: "rowg", value: 170},
+            {name: "rowj", value: 87},
+            {name: "rowh", value: 1},
+            {name: "rowl", value: 171},
+            {name: "rowm", value: 235},
+            {name: "rowvc", value: 765},
+            {name: "rowpf", value: 0},
+            {name: "rowd23", value: 657}
+        ];
+        
+        for (const [index, row] of rows.entries()) {
+            output.innerHTML += `<p>${row.name}</p>`;
+            console.log(index);
+        }
+    </script>
+</body>
+
+</html>
